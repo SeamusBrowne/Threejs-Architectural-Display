@@ -94,7 +94,7 @@
 				const loader = new GLTFLoader();
 				loader.setDRACOLoader( dracoLoader );
 
-				loader.load( 'models/gltf/CountyCouncil.glb', function ( gltf ) {
+				loader.load( 'models/CountyCouncil.glb', function ( gltf ) {
 
 					const displayModel = gltf.scene.children[ 0 ];
 
