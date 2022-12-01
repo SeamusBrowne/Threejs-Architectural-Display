@@ -8,7 +8,7 @@ import { RoomEnvironment } from './jsm/environments/RoomEnvironment.js';
 import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
 import { DRACOLoader } from './jsm/loaders/DRACOLoader.js';
 
-let camera, scene, renderer;
+let camera, scene, renderer, labelRenderer;
 let stats;
 
 let controls;
@@ -26,6 +26,13 @@ function init() {
 	renderer.toneMapping = THREE.ACESFilmicToneMapping;
 	renderer.toneMappingExposure = 0.85;
 	container.appendChild( renderer.domElement );
+	
+	labelRenderer = new CSS2DRenderer();
+	labelRenderer.setSize( window.innerWidth, window.innerHeight );
+	labelRenderer.domElement.style.position = 'absolute';
+	labelRenderer.domElement.style.top = '0px';
+	labelRenderer.domElement.style.pointerEvents = 'none';
+	container.appendChild( labelRenderer.domElement );
 
 	window.addEventListener( 'resize', onWindowResize );
 
@@ -93,7 +100,8 @@ function init() {
 	text.content = 'Cork County Council';
 	
 	const label = new CSS2DObject( text );
-	label.position.set
+	label.position.set(0, 1.5, 0);
+	scene.add( label );
 
 	// Load in Models
 
@@ -108,8 +116,8 @@ function init() {
 		const displayModel = gltf.scene.children[ 0 ];
 
 		displayModel.getObjectByName( 'cocoBuilding' ).material = council;
-		displayModel.getObjectByName( 'Areas:building' ).material = buildingObjects;
-		displayModel.getObjectByName( 'EXPORT_GOOGLE_SAT_WM' ).material = terrainObject;
+		// displayModel.getObjectByName( 'Areas:building' ).material = buildingObjects;
+		// displayModel.getObjectByName( 'EXPORT_GOOGLE_SAT_WM' ).material = terrainObject;
 
 		
 		scene.add( displayModel );
@@ -124,12 +132,14 @@ function onWindowResize() {
 	camera.updateProjectionMatrix();
 
 	renderer.setSize( window.innerWidth, window.innerHeight );
+	labelRenderer.setSize( window.innerWidth, window.innerHeight );
 
 }
 
 function render() {
 
 	renderer.render( scene, camera );
+	labelRenderer.render( scene, camera );
 
 	stats.update();
 
