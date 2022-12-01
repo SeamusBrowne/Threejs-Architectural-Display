@@ -85,6 +85,15 @@ function init() {
 	const terrainObject = new THREE.MeshPhysicalMaterial( {
 		color: 0xc8c8c8, metalness: 0.2, roughness: 0.4, clearcoat: 0.2, clearcoatRoughness: 0.4
 	} );
+	
+	// Labels
+	
+	const text = document.createElement( 'div' );
+	text.className = 'label';
+	text.content = 'Cork County Council';
+	
+	const label = new CSS2DObject( text );
+	label.position.set
 
 	// Load in Models
 
