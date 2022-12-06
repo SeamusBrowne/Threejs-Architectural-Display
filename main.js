@@ -95,13 +95,45 @@ function init() {
 	
 	// Labels
 	
-	const text = document.createElement( 'div' );
-	text.className = 'label';
-	text.content = 'Cork County Council';
-	
-	const label = new CSS2DObject( text );
-	label.position.set(0, 1.5, 0);
-	scene.add( label );
+	const landmarkCOCO = document.createElement( 'div' );
+	landmarkCOCO.className = 'label';
+	landmarkCOCO.textContent = 'Cork County Council';
+
+	const labelCOCO = new CSS2DObject( landmarkCOCO );
+	labelCOCO.position.set( 0, 1.5, 0 );
+	scene.add( labelCOCO );
+
+	const landmarkCUH = document.createElement( 'div' );
+	landmarkCUH.className = 'label';
+	landmarkCUH.textContent = 'Cork University Hospital';
+
+	const labelCUH = new CSS2DObject( landmarkCUH );
+	labelCUH.position.set( -2, 1, 16 );
+	scene.add( labelCUH );
+
+	const landmarkUCC = document.createElement( 'div' );
+	landmarkUCC.className = 'label';
+	landmarkUCC.textContent = 'University College Cork';
+
+	const labelUCC = new CSS2DObject( landmarkUCC );
+	labelUCC.position.set( 14, 1, 0 );
+	scene.add( labelUCC );
+
+	const landmarkMTU = document.createElement( 'div' );
+	landmarkMTU.className = 'label';
+	landmarkMTU.textContent = 'Munster Technological University';
+
+	const labelMTU = new CSS2DObject( landmarkMTU );
+	labelMTU.position.set( -27, 1, 13 );
+	scene.add( labelMTU );
+
+	const landmarkLough = document.createElement( 'div' );
+	landmarkLough.className = 'label';
+	landmarkLough.textContent = 'The Lough';
+
+	const labelLough = new CSS2DObject( landmarkLough );
+	labelLough.position.set( 22, 1, 10 );
+	scene.add( labelLough );
 
 	// Load in Models
 
