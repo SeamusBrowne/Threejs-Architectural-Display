@@ -134,6 +134,27 @@ function init() {
 	const labelLough = new CSS2DObject( landmarkLough );
 	labelLough.position.set( 22, 1, 10 );
 	scene.add( labelLough );
+	
+	// Show Labels
+	
+	const labelState = document.getElementById( 'label-state' );
+	labelState.addEventListener( 'click', function () {
+		
+		if(labelCOCO.visible = !labelCOCO.visible){
+			labelCOCO.visible = true;
+			labelCUH.visible = true;
+			labelUCC.visible = true;
+			labelMTU.visible = true;
+			labelLough.visible = true;
+		} else {
+			labelCOCO.visible = false;
+			labelCUH.visible = false;
+			labelUCC.visible = false;
+			labelMTU.visible = false;
+			labelLough.visible = false;
+		}	
+					
+	} );
 
 	// Load in Models
 
