@@ -29,3 +29,35 @@ body {
 	border-right: 8px solid transparent;
 	margin-top: 25px;
 }
+.info_controls{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 5%;
+	height: 10%;
+}
+.controls{
+	position: absolute;
+	display: none;
+	padding: 1rem;
+	justify-content: space-around;
+}
+.info_controls:hover + .controls{
+	display: block;
+        background-color: rgba(31, 30, 78, 0.75);
+	top: 10%;
+	right: 0%;
+	z-index: 10;
+		}
+.i{
+	font-size: 2.5rem;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-weight: 200;
+	text-align: center;
+	border: 2px solid white;
+	padding: 25%;
+	border-radius: 50%;
+	cursor: pointer;
+	margin-top: 2px;
+	margin-right: 2px;
+}
