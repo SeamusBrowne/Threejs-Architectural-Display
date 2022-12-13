@@ -7,6 +7,19 @@ body {
 	line-height: 24px;
 	overscroll-behavior: none;
 }
+.panel {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 15%;
+	flex-direction: column;
+	padding-top: 4rem;
+	background-color: rgb(0, 0, 0, 0.75);
+	z-index: 10;
+}
+.panel_section {
+	flex-direction: row;
+}
 .label {
 	text-shadow: -1px 1px 1px rgb(0,0,0);
 	font-size: 12px;
@@ -28,6 +41,13 @@ body {
 	border-left: 8px solid transparent;
 	border-right: 8px solid transparent;
 	margin-top: 25px;
+}
+.landmarkText {
+	left: 0;
+}
+input {
+	cursor: pointer;
+	right: 0;
 }
 .info_controls{
 	position: absolute;
