@@ -20,6 +20,11 @@ body {
 .panel_section {
 	flex-direction: row;
 }
+.line_break {
+	border-top: 2px solid rgba(255, 255, 255, 0.5);
+	width: 90%;
+	margin: 0 auto;
+}
 .label {
 	text-shadow: -1px 1px 1px rgb(0,0,0);
 	font-size: 12px;
