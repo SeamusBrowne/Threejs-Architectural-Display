@@ -45,7 +45,6 @@ function init() {
 	camera.position.set( 3, 2, -3 );
 
 	controls = new OrbitControls( camera, container );
-	controls.target.set( 0, 10, 2 );
 	controls.update();
 
 
