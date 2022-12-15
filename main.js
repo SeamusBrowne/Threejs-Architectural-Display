@@ -42,7 +42,7 @@ function init() {
 	//
 
 	camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 0.1, 100 );
-	camera.position.set( 10, 5, 16 );
+	camera.position.set( 3, 2, -3 );
 
 	controls = new OrbitControls( camera, container );
 	controls.target.set( 0, 10, 2 );
