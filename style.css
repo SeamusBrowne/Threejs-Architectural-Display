@@ -7,6 +7,15 @@ body {
 	line-height: 24px;
 	overscroll-behavior: none;
 }
+h1 {
+	font-size: 1.625rem;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-weight: 200;
+	margin-top: 2rem;
+	text-align: center;
+	padding-bottom: 2rem;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
 .panel {
 	position: absolute;
 	top: 0;
