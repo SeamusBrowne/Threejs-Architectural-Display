@@ -62,11 +62,21 @@ h1 {
 	margin-top: 25px;
 }
 .landmarkText {
-	left: 0;
+	font-size: 0.75rem;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-input {
+input[type="checkbox"] {
+	appearance: none;
 	cursor: pointer;
-	right: 0;
+	pointer-events: auto;
+	width: 1rem;
+	height: 1rem;
+	background-color: rgb(0, 0, 0, 0.01);
+	border: solid 2px #fff;
+	border-radius: 0.625rem;
+}
+input[type="checkbox"]:checked {
+	background-color: rgb(21, 110, 194);
 }
 .info_controls{
 	position: absolute;
