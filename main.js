@@ -70,18 +70,6 @@ function init() {
 		}
 
 	} );
-        
-        const terrainState = document.getElementById( 'terrain-state' );
-	terrainState.addEventListener( 'click', function () {
-
-		if (terrainState.checked == true){
-			terrainObject.visible = true;
-			
-		} else {
-			terrainObject.visible = false;
-		}
-
-	} );
 
 	// Materials
 
@@ -172,9 +160,6 @@ function init() {
 		const displayModel = gltf.scene.children[ 0 ];
 
 		displayModel.getObjectByName( 'cocoBuilding' ).material = council;
-		// displayModel.getObjectByName( 'Areas:building' ).material = buildingObjects;
-		// displayModel.getObjectByName( 'EXPORT_GOOGLE_SAT_WM' ).material = terrainObject;
-
 		
 		scene.add( displayModel );
 
