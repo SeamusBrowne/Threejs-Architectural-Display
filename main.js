@@ -4,6 +4,7 @@ import Stats from './jsm/libs/stats.module.js';
 
 import { OrbitControls } from './jsm/controls/OrbitControls.js';
 import { RoomEnvironment } from './jsm/environments/RoomEnvironment.js';
+import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
 
 import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
 import { DRACOLoader } from './jsm/loaders/DRACOLoader.js';
