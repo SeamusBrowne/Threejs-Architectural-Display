@@ -1,19 +1,27 @@
-import * as THREE from '../build/three.module.js';
+<script type="importmap">
+	{
+		"imports": {
+			"three": "../build/three.module.js",
+			"three/addons/": "./jsm/"
+		}
+	}
+</script>
 
-import Stats from './jsm/libs/stats.module.js';
+import * as THREE from 'three';
 
-import { OrbitControls } from './jsm/controls/OrbitControls.js';
-import { RoomEnvironment } from './jsm/environments/RoomEnvironment.js';
+import Stats from 'three/addons/libs/stats.module.js';
+
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
 
-import { GLTFLoader } from './jsm/loaders/GLTFLoader.js';
-import { DRACOLoader } from './jsm/loaders/DRACOLoader.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
 let camera, scene, renderer, labelRenderer;
 let stats;
 
 let controls;
-
 
 function init() {
 
@@ -23,7 +31,7 @@ function init() {
 	renderer.setPixelRatio( window.devicePixelRatio );
 	renderer.setSize( window.innerWidth, window.innerHeight );
 	renderer.setAnimationLoop( render );
-	renderer.outputEncoding = THREE.sRGBEncoding;
+	renderer.outputColorSpace = THREE.sRGBColorSpace;
 	renderer.toneMapping = THREE.ACESFilmicToneMapping;
 	renderer.toneMappingExposure = 0.85;
 	container.appendChild( renderer.domElement );
@@ -57,6 +65,7 @@ function init() {
 
 	scene = new THREE.Scene();
 	scene.environment = pmremGenerator.fromScene( new RoomEnvironment() ).texture;
+	scene.add(light);
 
         // Show Objects
 
